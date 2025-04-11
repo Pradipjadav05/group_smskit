@@ -83,13 +83,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.2"
-  flutter_sms_plus:
-    dependency: "direct main"
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -105,6 +98,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  group_smskit:
+    dependency: "direct main"
+    description:
+      path: ".."
+      relative: true
+    source: path
+    version: "0.0.1"
   integration_test:
     dependency: "direct dev"
     description: flutter

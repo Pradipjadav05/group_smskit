@@ -1,5 +1,5 @@
 
-# flutter_sms_plus
+# group_smskit
 
 A Flutter plugin to send SMS messages from Android and iOS devices using native platform code.
 
@@ -23,7 +23,7 @@ Add the dependency in your `pubspec.yaml`:
 
 ```dart
 dependencies:
-  flutter_sms_plus:
+  group_smskit:
 
 ```
 
@@ -34,7 +34,7 @@ dependencies:
 ### Dart Example
 
 ```dart
-import 'package:flutter_sms_plus/flutter_sms_plus.dart';
+import 'package:group_smskit/group_smskit.dart';
 
 ElevatedButton(
     onPressed: () async {
@@ -112,7 +112,7 @@ On iOS, the plugin opens the default SMS composer. The user must manually press 
 
 ## 📄 License
 
-MIT License. See [LICENSE](https://github.com/Pradipjadav05/flutter_sms_plus/blob/master/LICENSE) for details.
+MIT License. See [LICENSE](https://github.com/Pradipjadav05/group_smskit/blob/master/LICENSE) for details.
 
 ---
 

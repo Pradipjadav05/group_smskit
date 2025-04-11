@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  flutter_sms_plus
+  group_smskit
   permission_handler_windows
 )
 

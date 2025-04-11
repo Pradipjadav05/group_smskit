@@ -1,4 +1,4 @@
-name: flutter_sms_plus_example
+name: group_smskit_example
 description: "Demonstrates how to use the sms_sender plugin."
 
 
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
 
   permission_handler:
-  flutter_sms_plus:
+  group_smskit:
     path: ../
   cupertino_icons: ^1.0.6
 

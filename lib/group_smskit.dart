@@ -1,12 +1,11 @@
+import 'package:group_smskit/group_smskit_platform_interface.dart';
 
-import 'package:flutter_sms_plus/flutter_sms_plus_platform_interface.dart';
-
-class FlutterSMSPlus {
+class GroupSMSKit {
   static Future<String?> sendSms({
     required List<String> numbers,
     required String message,
   }) {
-    return FlutterSMSPlusPlatform.instance.sendSms(
+    return GroupSMSKitPlatform.instance.sendSms(
       numbers: numbers,
       message: message,
     );

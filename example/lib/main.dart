@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Import the SMS sender plugin
-import 'package:flutter_sms_plus/flutter_sms_plus.dart';
+import 'package:group_smskit/group_smskit.dart';
 
 // Import permission handler for requesting SMS permission on Android
 import 'package:permission_handler/permission_handler.dart';
@@ -41,7 +41,7 @@ class _SmsSenderScreenState extends State<SmsSenderScreen> {
             await requestSmsPermission();
 
             // Call the plugin method to send SMS
-            final result = await FlutterSMSPlus.sendSms(
+            final result = await GroupSMSKit.sendSms(
               // List of recipient numbers
               numbers: ['9876543210', '9123456789'],
               // Message body
