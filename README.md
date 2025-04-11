@@ -112,7 +112,7 @@ On iOS, the plugin opens the default SMS composer. The user must manually press 
 
 ## 📄 License
 
-MIT License. See [LICENSE](https://github.com/Pradipjadav05/sms_sender.git/LICENSE) for details.
+MIT License. See [LICENSE](https://github.com/Pradipjadav05/sms_sender/blob/master/LICENSE) for details.
 
 ---
 

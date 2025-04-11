@@ -11,44 +11,50 @@ void main() {
 }
 
 // Root widget of the application
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: SmsSenderScreen(),
+    );
+  }
 }
 
-// The stateful widget that manages app state
-class _MyAppState extends State<MyApp> {
-  @override
-  void initState() {
-    super.initState();
-    // You could initialize things here if needed
-  }
+class SmsSenderScreen extends StatefulWidget {
+  const SmsSenderScreen({super.key});
 
+  @override
+  State<SmsSenderScreen> createState() => _SmsSenderScreenState();
+}
+
+class _SmsSenderScreenState extends State<SmsSenderScreen> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('SMS Sender App'), // App bar title
-        ),
-        body: Center(
-          child: ElevatedButton(
-            onPressed: () async {
-              // Request permission before sending SMS
-              await requestSmsPermission();
+    return Scaffold(
+      appBar: AppBar(title: const Text('SMS Sender App')),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () async {
+            // Request permission before sending SMS
+            await requestSmsPermission();
 
-              // Call the plugin method to send SMS
-              await SmsSender.sendSms(
-                // List of recipient numbers
-                numbers: ['9876543210', '9123456789'],
-                // Message body
-                message: 'Hii...!!',
+            // Call the plugin method to send SMS
+            final result = await SmsSender.sendSms(
+              // List of recipient numbers
+              numbers: ['9876543210', '9123456789'],
+              // Message body
+              message: 'Hii...!!',
+            );
+
+            if (context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(content: Text(result ?? 'Message sent.')),
               );
-            },
-            child: const Text("SEND SMS"),
-          ),
+            }
+          },
+          child: const Text("SEND SMS"),
         ),
       ),
     );
