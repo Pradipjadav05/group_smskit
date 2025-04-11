@@ -1,5 +1,5 @@
 
-# sms_sender
+# flutter_sms_plus
 
 A Flutter plugin to send SMS messages from Android and iOS devices using native platform code.
 
@@ -23,7 +23,7 @@ Add the dependency in your `pubspec.yaml`:
 
 ```dart
 dependencies:
-  sms_sender:
+  flutter_sms_plus:
 
 ```
 
@@ -34,7 +34,7 @@ dependencies:
 ### Dart Example
 
 ```dart
-import 'package:sms_sender/sms_sender.dart';
+import 'package:flutter_sms_plus/flutter_sms_plus.dart';
 
 ElevatedButton(
     onPressed: () async {
@@ -112,7 +112,7 @@ On iOS, the plugin opens the default SMS composer. The user must manually press 
 
 ## 📄 License
 
-MIT License. See [LICENSE](https://github.com/Pradipjadav05/sms_sender/blob/master/LICENSE) for details.
+MIT License. See [LICENSE](https://github.com/Pradipjadav05/flutter_sms_plus/blob/master/LICENSE) for details.
 
 ---
 
