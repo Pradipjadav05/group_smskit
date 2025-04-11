@@ -1,4 +1,4 @@
-name: sms_sender
+name: flutter_sms_plus
 description: "A Flutter plugin to send SMS messages directly from Android and iOS devices using platform-specific native code."
 version: 0.0.1
 homepage: https://github.com/Pradipjadav05/sms_sender.git

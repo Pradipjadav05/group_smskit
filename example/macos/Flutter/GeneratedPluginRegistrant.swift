@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import sms_sender
+import flutter_sms_plus
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {
   SmsSenderPlugin.register(with: registry.registrar(forPlugin: "SmsSenderPlugin"))

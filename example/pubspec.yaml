@@ -1,4 +1,4 @@
-name: sms_sender_example
+name: flutter_sms_plus_example
 description: "Demonstrates how to use the sms_sender plugin."
 
 
@@ -11,7 +11,7 @@ dependencies:
     sdk: flutter
 
   permission_handler:
-  sms_sender:
+  flutter_sms_plus:
     path: ../
   cupertino_icons: ^1.0.6
 

@@ -6,12 +6,12 @@
 
 #include "generated_plugin_registrant.h"
 
+#include <flutter_sms_plus/sms_sender_plugin_c_api.h>
 #include <permission_handler_windows/permission_handler_windows_plugin.h>
-#include <sms_sender/sms_sender_plugin_c_api.h>
 
 void RegisterPlugins(flutter::PluginRegistry* registry) {
-  PermissionHandlerWindowsPluginRegisterWithRegistrar(
-      registry->GetRegistrarForPlugin("PermissionHandlerWindowsPlugin"));
   SmsSenderPluginCApiRegisterWithRegistrar(
       registry->GetRegistrarForPlugin("SmsSenderPluginCApi"));
+  PermissionHandlerWindowsPluginRegisterWithRegistrar(
+      registry->GetRegistrarForPlugin("PermissionHandlerWindowsPlugin"));
 }

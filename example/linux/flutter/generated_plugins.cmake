@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  sms_sender
+  flutter_sms_plus
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

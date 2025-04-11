@@ -1,12 +1,12 @@
 
-import 'sms_sender_platform_interface.dart';
+import 'package:flutter_sms_plus/flutter_sms_plus_platform_interface.dart';
 
-class SmsSender {
+class FlutterSMSPlus {
   static Future<String?> sendSms({
     required List<String> numbers,
     required String message,
   }) {
-    return SmsSenderPlatform.instance.sendSms(
+    return FlutterSMSPlusPlatform.instance.sendSms(
       numbers: numbers,
       message: message,
     );

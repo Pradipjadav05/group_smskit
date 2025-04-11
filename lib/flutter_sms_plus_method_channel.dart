@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_sms_plus/flutter_sms_plus_platform_interface.dart';
 
-import 'sms_sender_platform_interface.dart';
 
-/// An implementation of [SmsSenderPlatform] that uses method channels.
-class MethodChannelSmsSender extends SmsSenderPlatform {
+/// An implementation of [FlutterSMSPlusPlatform] that uses method channels.
+class MethodChannelFlutterSMSPlus extends FlutterSMSPlusPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   final methodChannel = const MethodChannel('sms_sender');

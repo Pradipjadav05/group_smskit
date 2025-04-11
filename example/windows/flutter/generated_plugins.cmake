@@ -3,8 +3,8 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
+  flutter_sms_plus
   permission_handler_windows
-  sms_sender
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST
