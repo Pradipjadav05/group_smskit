@@ -1,7 +1,7 @@
 name: group_smskit
 description: "A Flutter plugin to send SMS messages directly from Android and iOS devices using platform-specific native code."
 version: 0.0.1
-homepage: https://github.com/Pradipjadav05/sms_sender.git
+homepage: https://github.com/Pradipjadav05/group_smskit.git
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
