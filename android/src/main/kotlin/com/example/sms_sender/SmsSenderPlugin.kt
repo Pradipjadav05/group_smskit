@@ -25,10 +25,24 @@ class SmsSenderPlugin: FlutterPlugin, MethodCallHandler {
     if (call.method == "sendSms") {
       val numbers = call.argument<List<String>>("numbers")
       val message = call.argument<String>("message")
+
+      if (numbers.isNullOrEmpty() || message.isNullOrEmpty()) {
+        result.error("INVALID_DATA", "Numbers or message is empty", null)
+        return
+      }
+
       try {
         val smsManager = SmsManager.getDefault()
-        numbers?.forEach { number ->
-          smsManager.sendTextMessage(number, null, message, null, null)
+
+        numbers.forEach { number ->
+          val parts = smsManager.divideMessage(message)
+          smsManager.sendMultipartTextMessage(
+            number,
+            null,
+            parts,
+            null,
+            null
+          )
         }
         result.success("SMS sent successfully.")
       } catch (e: Exception) {
@@ -43,3 +57,4 @@ class SmsSenderPlugin: FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(null)
   }
 }
+
